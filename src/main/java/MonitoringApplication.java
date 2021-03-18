@@ -6,10 +6,11 @@ public class MonitoringApplication {
         DataConnector dataConnector = new JSONInformation();
         dataConnector.readInformation();
         product = dataConnector.getProduct();
-
+        System.out.println(product.toString());
 
         DataConnector dataConnector2 = new XMLInformation();
         dataConnector2.readInformation();
-        product = dataConnector.getProduct();
+        product = dataConnector2.getProduct();
+        System.out.println(product.toString());
     }
 }

@@ -1,8 +1,8 @@
 public class Product {
     private String name;
     private String description;
-    private long price;
-    private int units;
+    private String price;
+    private String units;
 
     public String getDescription() {
         return description;
@@ -12,19 +12,19 @@ public class Product {
         this.description = description;
     }
 
-    public long getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public int getUnits() {
+    public String getUnits() {
         return units;
     }
 
-    public void setUnits(int units) {
+    public void setUnits(String units) {
         this.units = units;
     }
 
@@ -34,5 +34,10 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString(){
+        return  "Product Name: " + name + "\n" + "Description : " + description + "\n" + "Price : " + price + "\n" + "Units : " + units + "\n";
     }
 }
