@@ -2,10 +2,11 @@ import com.google.gson.Gson;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class JSONInformation implements DataConnector {
+public class JSONReader implements DataConnector {
     private Product product;
 
     public Product getProduct(){
+        readInformation();
         return product;
     }
 

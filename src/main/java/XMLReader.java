@@ -1,13 +1,14 @@
 import org.w3c.dom.Document;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
-public class XMLInformation implements DataConnector {
-
+public class XMLReader {
     private Product product;
 
     public Product getProduct(){
+        readInformation();
         return product;
     }
 
@@ -32,4 +33,6 @@ public class XMLInformation implements DataConnector {
         xmlProduct.setUnits(document.getElementsByTagName("units").item(0).getTextContent());
         return xmlProduct;
     }
+
+    public void xmlQuery(){}
 }
